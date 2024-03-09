@@ -8,8 +8,14 @@
  { 
       internal class Book 
       { 
-      
+           public Book() 
+           { 
+                Console.WriteLine(" Realy"); 
+                Console.WriteLine(" Foreing"); 
+           } 
       
       } 
  } 
+ 
+ 
  
