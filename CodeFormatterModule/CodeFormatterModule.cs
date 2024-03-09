@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CodeFormatterModule
 {
 	public class CodeFormatterModule
-	{
+    {
 		public readonly FormatCode formatCode;
 		public CodeFormatterModule()
 		{
@@ -18,9 +18,12 @@ namespace CodeFormatterModule
 
 		public static async Task Main(string[] args)
 		{
-			new CodeFormatterModule().formatCode.FormatCodeFile("Test/Book.cs");
+			//new CodeFormatterModule().formatCode.FormatCodeFile("Test",true);
+
+			string[] array = { "Test.cs", "Utilities.cs" };
+			new CodeFormatterModule().formatCode.FormatCodeFile(array);
 			Console.WriteLine("Done");
-			//await new TextFormatterModule().FormatFile("Test.cs");
+
 		}
 
 		
