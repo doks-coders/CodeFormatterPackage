@@ -9,6 +9,7 @@ namespace CodeFormatterModule
 {
 	internal class DirectoryUtilities
 	{
+		#region Get the Parent Directory
 		public string GetParentDirectory()
 		{
 			string rootDirectory = Directory.GetCurrentDirectory();
@@ -18,9 +19,9 @@ namespace CodeFormatterModule
 			});
 			return rootDirectory;
 		}
+		#endregion
 
-
-		
+		#region Get File Details
 		public string GetFileDetails(string path,bool realPath=false)
 		{
 			if (realPath)
@@ -30,10 +31,11 @@ namespace CodeFormatterModule
 			path = GetRelativeFileDirectory(path);
 			return File.ReadAllText(path);
 		}
+		#endregion
 
+		#region Write Text To File
 		public void WriteFileText(string path, string text, bool realPath=false)
 		{
-		
 			if (realPath)
 			{
 				File.WriteAllText(path, text);
@@ -42,7 +44,9 @@ namespace CodeFormatterModule
 			string newPath = GetRelativeFileDirectory(path);
 			File.WriteAllText(newPath, text);
 		}
+		#endregion
 
+		#region Get Files and Sub Files
 		public List<string> GetAllFilesWithSubFiles(string directoryPath)
 		{
 	
@@ -66,12 +70,15 @@ namespace CodeFormatterModule
 
 			return allFiles;
 		}
+		#endregion
 
+		#region Get Relative File Directory
 		public string GetRelativeFileDirectory(string relativePath)
 		{
 			string parentPath = GetParentDirectory();
 			return $"{parentPath}/{relativePath}";
 		}
+		#endregion
 
 	}
 }
