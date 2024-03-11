@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeFormatterModule.Utilities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CodeFormatterModule
 {
-	public class FormatCode
+    public class FormatCode
 	{
-		private readonly Utilities _utilities;
 		private readonly DirectoryUtilities _directoryUtilites;
+		private readonly FormatStrings _strings;
 		public FormatCode()
 		{
-			_utilities = new Utilities();
 			_directoryUtilites = new DirectoryUtilities();
+			_strings = new FormatStrings();
 		}
 
 		public void FormatCodeFile(string? path)
@@ -73,7 +74,7 @@ namespace CodeFormatterModule
 		public void RetrieveAndFormatCode(string path, bool realPath = false)
 		{
 			var fileContent = _directoryUtilites.GetFileDetails(path, realPath);
-			string formattedFile = _utilities.GetFormattedCode(fileContent);
+			string formattedFile = _strings.GetFormattedCode(fileContent);
 			_directoryUtilites.WriteFileText(path, formattedFile, realPath);
 		}
 

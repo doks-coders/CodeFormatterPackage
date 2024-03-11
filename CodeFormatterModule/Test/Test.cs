@@ -3,11 +3,12 @@
  using System.Linq; 
  using System.Text; 
  using System.Threading.Tasks; 
- namespace TextFormatterModule 
+ namespace CodeFormatterModule.Test 
  { 
      public class TestObject 
      { 
-         class T { 
+         class T 
+         { 
              public T() 
              { 
               
@@ -21,20 +22,6 @@
          } 
      } 
  } 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
