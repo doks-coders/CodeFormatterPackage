@@ -9,7 +9,11 @@ namespace CodeFormatterModule
 {
 	internal class FormatStrings
 	{
-		
+		/// <summary>
+		/// This gets the formatted code from the string
+		/// </summary>
+		/// <param name="codePage"></param>
+		/// <returns>string</returns>
 		#region GetFormattedCode 
 		public string GetFormattedCode(string codePage)
 		{
@@ -26,7 +30,7 @@ namespace CodeFormatterModule
 					level--;
 				}
 
-				formattedString += $" {GetSpaces(4 * level)}{new GetFormattedStrings(s).formattedStrings} \n";
+				formattedString += $"{GetSpaces(4 * level)}{new GetFormattedStrings(s).formattedStrings} \n";
 
 
 				if ((s.Trim().IndexOf("{") > -1 && s.Trim().Length == 1)
@@ -40,7 +44,11 @@ namespace CodeFormatterModule
 		}
 		#endregion
 
-
+		/// <summary>
+		/// Adds returns string with specified number of spaces
+		/// </summary>
+		/// <param name="spaces"></param>
+		/// <returns></returns>
 		#region GetSpaces 
 		public string GetSpaces(int spaces)
 		{

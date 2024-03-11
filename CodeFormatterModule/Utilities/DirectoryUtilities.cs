@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeFormatterModule.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace CodeFormatterModule.Utilities
 {
-    internal class DirectoryUtilities
+    internal class DirectoryUtilities:IDirectoryUtilities
     {
+
         #region Get the Parent Directory
         public string GetParentDirectory()
         {
