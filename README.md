@@ -65,7 +65,7 @@ catch (Exception ex)
 
 ### Format all files in directory and subdirectory
 
-Pass in the paths of the file you want formatted in a string array
+Pass in the path of the folder you want formatted 
 ```csharp
 var formatter = new FormatCode();
 
