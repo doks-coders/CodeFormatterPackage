@@ -9,19 +9,12 @@ using System.Threading.Tasks;
 
 namespace CodeFormatterModule
 {
-	public class TestModule
+	internal static class TestModule
     {
-		public readonly FormatCode formatCode;
-		public TestModule()
+		internal static async Task Main(string[] args)
 		{
-			formatCode = new FormatCode();
-		}
-
-		public static async Task Main(string[] args)
-		{
-			var code =  new TestModule();
-			code.formatCode.FormatCodeFile("Test",children:true);
-			
+			FormatCode formatCode = new();
+			formatCode.FormatCodeFile("LineFormatConfigurations",children:true);
 		}
 	}
 }
