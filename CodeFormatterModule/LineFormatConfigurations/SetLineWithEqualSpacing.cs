@@ -10,7 +10,7 @@ namespace CodeFormatterModule.LineFormatConfigurations
     { 
      
         /// <summary> 
-        /// This method makes the lines to have equal spaces 
+        /// This method makes the lines to have equal spaces in between characters
         /// </summary> 
         /// <param name="line"></param> 
         /// <returns></returns> 
