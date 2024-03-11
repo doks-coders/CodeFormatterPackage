@@ -49,7 +49,7 @@ var formatter = new FormatCode();
 try
 {
 	var files = new string[] { "File1.cs", "File2.cs" };
-    formatter.FormatCodeFile(files);
+    	formatter.FormatCodeFile(files);
 }
 catch (Exception ex) 
 {
