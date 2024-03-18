@@ -14,9 +14,7 @@ namespace CodeFormatterModule
 		internal static async Task Main(string[] args)
 		{
 			FormatCode formatCode = new();
-			formatCode.FormatCodeFile("LineFormatConfigurations",children:true);
+			formatCode.FormatCodeFile("Test", children:true);
 		}
 	}
 }
-
-

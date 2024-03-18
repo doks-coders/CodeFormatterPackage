@@ -40,7 +40,7 @@ internal class FormatStrings
 				level++;
 			}
 		}
-		return formattedString;
+		return formattedString.TrimEnd();
 	}
 	#endregion
 
@@ -54,14 +54,14 @@ internal class FormatStrings
 	{
 		if (spaces > 0)
 		{
-			string emptySpace = "";
+			string emptySpace = string.Empty;
 			Enumerable.Range(0, spaces).ToList().ForEach(x =>
 			{
 				emptySpace += " ";
 			});
 			return emptySpace;
 		}
-		return "";
+		return string.Empty;
 	}
 	#endregion
 }

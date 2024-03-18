@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CodeFormatterModule;
@@ -90,8 +91,12 @@ public class FormatCode:IFormatCode
 	}
 	#endregion
 
+	private string RemoveBottomWhiteSpace(string input)
+	{
+        string pattern = @"(\n\s*)+";
+
+        // Replace consecutive newline characters with a single newline character
+        string output = Regex.Replace(input, pattern, "\n");
+		return output;
+    }
 }
-
-
-
-
